@@ -1,0 +1,26 @@
+﻿<Page x:Class="ObjectsSearchHelper.ObjPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ObjectsSearchHelper"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ObjPage">
+
+    <Grid Background="#B7BEDA">
+        <Button Focusable="False" Width="50" Height="50" Name="BackButton" Click="BackButton_Click" Background="Transparent" BorderThickness="0" RenderTransformOrigin="-3.44,-1.8" Margin="0,0,684,361">
+            <Image Source="Resources/back_arrow.png"/>
+        </Button>
+        <Image x:Name="ObjImage" Width="200" Height="200" Source="Resources/default_object.png" Margin="10,50,524,161"/>
+        <TextBox Background="White" x:Name="Description" Width="300" TextWrapping="Wrap" FontSize="16" Height="100" Margin="215,56,219,255" IsReadOnly="True"/>
+        <TextBox Background="White" x:Name="Square" FontSize="16" Height="40" Width="300"  IsReadOnly="True" PreviewTextInput="Square_PreviewTextInput" Margin="215,161,219,210"/>
+        <TextBox Background="White" x:Name="Adress" Width="300" Height="40"  FontSize="16" IsReadOnly="True" Margin="215,206,219,165"/>
+        <TextBox Background="White" x:Name="Price" PreviewTextInput="Price_PreviewTextInput" Width="300" Height="40" FontSize="16"  IsReadOnly="True" Margin="248,271,252,139"/>
+        <Button x:Name="NextButton" Content="Перейти к договору" Margin="567,342,46,40" Background="Transparent" BorderBrush="Black" Click="Button_Click" Visibility="Hidden"/>
+        <Label Width="50" Height="30" Content="кв.м" FontSize="16" Margin="548,190,202,230"/>
+        <Label Width="70" Height="30" Content="руб." FontSize="16" Margin="548,281,182,139"/>
+        <Button x:Name="DeleteButton" Click="DeleteButton_Click" Background="#BF2929" Visibility="Hidden" Width="100" Height="50" FontSize="16" Content="Удалить" Margin="642,76,58,324"/>
+        <Button x:Name="EditButton" Click="EditButton_Click" Background="#22AC47" Width="120" Visibility="Hidden" Height="50" FontSize="16" Content="Редактировать" Margin="642,261,38,139"/>
+    </Grid>
+</Page>

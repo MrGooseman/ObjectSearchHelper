@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4dfb78fd2fe1497a97f69c6a723ba7cf" Name="Diagram1">
+        <EntityTypeShape EntityType="RealEstate_DataBaseModel.Advertisements" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstate_DataBaseModel.Clients" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstate_DataBaseModel.Properties" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstate_DataBaseModel.Realtors" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RealEstate_DataBaseModel.Users" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="RealEstate_DataBaseModel.FK_Advertisements_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstate_DataBaseModel.FK_Advertisements_Properties1" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstate_DataBaseModel.FK_Advertisements_Realtors" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstate_DataBaseModel.FK_Clients_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="RealEstate_DataBaseModel.FK_Realtors_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

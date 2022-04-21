@@ -1,0 +1,40 @@
+﻿<Page x:Class="ObjectsSearchHelper.NewAdvertPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ObjectsSearchHelper"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="NewAdvertPage">
+    <Page.DataContext>
+        <local:CBClass x:Name="CBViewModel"/>
+    </Page.DataContext>
+    <Grid Background="#B7BEDA">
+        <Button  Width="50" Height="50" Name="BackButton" Click="BackButton_Click" Background="Transparent" BorderThickness="0" Margin="0,0,684,361">
+            <Image Source="Resources/back_arrow.png"/>
+        </Button>
+        <Image x:Name="ObjImage" Source="Resources/default_object.png" Margin="33,95,583,172"/>
+        <Button x:Name="ImageLoadButton" Height="30" Background="#DBDBDB" BorderThickness="2" BorderBrush="Black" Click="ImageLoadButton_Click" FontSize="18" Foreground="Black" Content="Загрузить изображение" Margin="33,283,557,137"/>
+        <TextBox x:Name="Description" Width="300" TextWrapping="Wrap" PreviewTextInput="Description_PreviewTextInput"  FontSize="16" Height="100" Margin="369,43,131,307" IsReadOnly="False" BorderBrush="Black"/>
+        <TextBox x:Name="Square" KeyDown="Description_KeyDown" FontSize="16" Height="40" Width="300"  IsReadOnly="False" Margin="369,148,131,262" BorderBrush="Black"/>
+        <TextBox x:Name="AdressArea" KeyDown="Description_KeyDown" PreviewTextInput="Description_PreviewTextInput" Width="300" Height="40"  FontSize="16" IsReadOnly="False" Margin="369,193,131,217" BorderBrush="Black"/>
+        <TextBox x:Name="Price" KeyDown="Description_KeyDown" PreviewTextInput="AdressHouse_PreviewTextInput" Width="300" Height="40" FontSize="16" BorderBrush="Black" IsReadOnly="False" Margin="369,373,131,37"/>
+        <TextBox x:Name="AdressCity" KeyDown="Description_KeyDown" PreviewTextInput="Description_PreviewTextInput" Width="300" Height="40"  FontSize="16" IsReadOnly="False" Margin="369,238,131,172" BorderBrush="Black"/>
+        <TextBox x:Name="AdressStreet" KeyDown="Description_KeyDown" PreviewTextInput="Description_PreviewTextInput" Width="300" Height="40"  FontSize="16" IsReadOnly="False" Margin="369,283,131,127" BorderBrush="Black"/>
+        <TextBox x:Name="AdressHouse" PreviewTextInput="AdressHouse_PreviewTextInput" KeyDown="Description_KeyDown" Width="300" Height="40"  FontSize="16" IsReadOnly="False" Margin="369,328,131,82" BorderBrush="Black"/>
+        <TextBlock Text="Описание" Width="100" Height="30" FontSize="20" Margin="248,83,452,337"/>
+        <TextBlock Text="Площадь" Width="100" Height="30" FontSize="20" Margin="248,158,452,262"/>
+        <TextBlock Text="Область" Width="100" Height="30" FontSize="20" Margin="248,203,452,217"/>
+        <TextBlock Text="Город" Width="100" Height="30" FontSize="20" Margin="248,248,452,172"/>
+        <TextBlock Text="Улица" Width="100" Height="30" FontSize="20" Margin="248,293,452,127"/>
+        <TextBlock Text="Номер дома" Height="30" FontSize="20" Margin="248,338,436,82"/>
+        <TextBlock Text="Цена" Height="30" FontSize="20" Margin="248,380,436,40"/>
+        <TextBlock Text="Риэлтор" Height="30" FontSize="20" Margin="248,415,436,5"/>
+        <ComboBox Width="300" Height="30" Margin="369,418,131,2" x:Name="CBox" SelectedItem="{Binding Path=selectedRealtor}">
+            
+        </ComboBox>
+        <Button x:Name="CreateButton" Content="Создать" Margin="674,345,10,37" Background="#22AC47" BorderBrush="Black" FontSize="25" Click="CreateButton_Click"/>
+        <Button x:Name="ImageCleanButton" Height="30" Background="#DBDBDB" BorderThickness="2" BorderBrush="Black" Click="ImageCleanButton_Click" FontSize="18" Foreground="Black" Content="Удалить изображение" Margin="33,318,557,102"/>
+    </Grid>
+</Page>

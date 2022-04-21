@@ -1,0 +1,90 @@
+﻿<Window x:Class="ObjectsSearchHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ObjectsSearchHelper"
+        mc:Ignorable="d"
+        Title="Real Estate" Icon="Resources/house.png" Height="550" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" WindowStyle="ThreeDBorderWindow">
+    <Window.Resources>
+        <ControlTemplate TargetType="Button" x:Key="ButtonTemplate">
+            <Border CornerRadius="20"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{TemplateBinding Background}"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}" >
+                <ContentControl Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}" />
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="MainGrid" Visibility="Visible" Background="#B7BEDA">
+            <Button x:Name="OpenMenuButton" 
+                    Click="OpenMenuButton_Click" 
+                    Height="30" Width="30" 
+                    HorizontalAlignment="Left" 
+                    Background="Transparent" 
+                    VerticalAlignment="Top" 
+                    BorderThickness="0">
+                <Image Source="Resources/menu.png"/>
+            </Button>
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Width="810" Height="460" Margin="30"/>
+        </Grid>
+        <StackPanel x:Name="MenuStackPanel" Width="200" HorizontalAlignment="Left" Visibility="Hidden">
+            <StackPanel.Background>
+                <LinearGradientBrush StartPoint="1.15,0.5" EndPoint="0,0.4">
+                    <GradientStop Color="#8891B6" Offset="1" />
+                    <GradientStop Color="Transparent" Offset="0" />
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Button x:Name="CloseMenuButton" 
+                    Click="CloseMenuButton_Click" 
+                    Height="30" Width="30" 
+                    HorizontalAlignment="Left" 
+                    Background="Transparent"
+                    BorderThickness="0">
+                <Image Source="Resources/cancel.png"/>
+            </Button>
+            <Label Height="30" HorizontalAlignment="Center" FontSize="16" x:Name="NameLabel"/>
+            <TextBlock/>
+            <Button Template="{StaticResource ButtonTemplate}" 
+                    Style="{StaticResource ButtonStyle}" 
+                    Content="Главная"
+                    Height="30"
+                    x:Name="MainMenuButton"
+                    Click="MainMenuButton_Click"/>
+            <TextBlock/>
+            <Button Template="{StaticResource ButtonTemplate}" 
+                    Style="{StaticResource ButtonStyle}" 
+                    Content="Создать объявление"
+                    x:Name="CreateButton"
+                    Click="CreateButton_Click"
+                    Height="30"/>
+            <TextBlock/>
+            <Button Template="{StaticResource ButtonTemplate}" 
+                    Style="{StaticResource ButtonStyle}" 
+                    Content="Мои объявления"
+                    x:Name="MyAdvertButton"
+                    Click="MyAdvertButton_Click"
+                    Height="30"/>
+            <TextBlock/>
+            <Button Template="{StaticResource ButtonTemplate}" 
+                    Style="{StaticResource ButtonStyle}" 
+                    Content="Справка"
+                    x:Name="GuideButton"
+                    Click="GuideButton_Click"
+                    Height="30"/>
+            <TextBlock/>
+            <Button Template="{StaticResource ButtonTemplate}" 
+                    Style="{StaticResource ButtonStyle}" 
+                    Content="Выход"
+                    x:Name="ExitButton"
+                    Click="ExitButton_Click"
+                    Height="30"/>
+        </StackPanel>
+    </Grid>
+</Window>
